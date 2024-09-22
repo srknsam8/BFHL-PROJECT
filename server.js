@@ -42,7 +42,5 @@ app.get('/bfhl', (req, res) => {
     res.status(200).json({ operation_code: 1 });
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
+// Vercel requires exporting the app in serverless functions
+module.exports = app;
